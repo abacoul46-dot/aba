@@ -6,7 +6,7 @@ service cloud.firestore {
 
     // Le compte administrateur (connexion avec le code d'accès du site)
     function estAdmin() {
-      return request.auth != null && request.auth.token.email == "abacoul46@gmail.com";
+      return request.auth != null && request.auth.token.email == "abagroupmali@gmail.com";
     }
 
     // Catalogue du site (ordinateurs, logiciels, services) : lu par tous, modifié par l'admin
