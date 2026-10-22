@@ -1273,7 +1273,10 @@
         <div id="fichierInfo" class="admin-note" style="margin:0 0 14px;">Chargement…</div>
         <div class="field full"><label for="fichierInput">Nouveau fichier du logiciel (classeur Excel .xlsm/.xlsx, ou .zip)</label>
           <input id="fichierInput" type="file" accept=".xlsm,.xlsx,.xls,.zip,.rar,.exe"></div>
-        <button type="button" class="btn btn-primary" id="fichierEnvoyer" style="margin-top:12px;">Mettre ce fichier en ligne</button>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+          <button type="button" class="btn btn-primary" id="fichierEnvoyer">Mettre ce fichier en ligne</button>
+          <button type="button" class="btn btn-outline" id="fichierSupprimer" hidden>Supprimer le fichier en ligne</button>
+        </div>
         <p class="dl-msg" id="fichierMsg" hidden></p>
         <p class="form-note" style="margin-top:12px;">Le fichier n'est jamais visible par les visiteurs : chaque client validé reçoit sa propre copie, ouverte par son code. Les clients déjà validés gardent la version qu'ils ont reçue. Taille conseillée : moins de 10 Mo.</p>
       </div>
@@ -2882,11 +2885,32 @@
   function infoFichier(){
     var z = document.getElementById("fichierInfo");
     fdb().collection("fichiers").doc(VENTE.id).get().then(function(sn){
+      document.getElementById("fichierSupprimer").hidden = !sn.exists;
       if(!sn.exists){ z.innerHTML = "<b>Aucun fichier en ligne.</b> Déposez le logiciel ci-dessous avant de valider la première commande."; return; }
       var f = sn.data();
       z.innerHTML = "Fichier actuel : <b>" + esc(f.nom) + "</b> (" + Math.round(f.taille / 1024) + " Ko), mis en ligne le " + quand(f.majLe) + ".";
     }).catch(function(e){ z.textContent = erreurFr(e); });
   }
+  /* Supprime le fichier d'origine (les copies des clients déjà validés restent,
+     sauf si l'on révoque leur accès dans l'onglet Commandes). */
+  document.getElementById("fichierSupprimer").addEventListener("click", function(){
+    var m = document.getElementById("fichierMsg"), b = this;
+    var dire = function(t, cls){ m.hidden = false; m.className = "dl-msg " + (cls || ""); m.textContent = t; };
+    if(!admActif()){ dire("Connexion en ligne nécessaire (reconnectez-vous avec votre code administrateur).", "err"); return; }
+    if(!confirm("Supprimer le fichier du logiciel en ligne ? Plus aucune commande ne pourra être validée tant que vous n'en aurez pas déposé un nouveau.")) return;
+    var ref = fdb().collection("fichiers").doc(VENTE.id);
+    b.disabled = true; dire("Suppression…");
+    ref.get().then(function(sn){
+      var n = sn.exists ? (sn.data().parts || 0) : 0, l = [];
+      for(var i = 0; i < n + 3; i++) l.push(ref.collection("parts").doc(String(i)).delete());
+      return Promise.all(l).then(function(){ return ref.delete(); });
+    }).then(function(){
+      var nb = admCmds.filter(function(c){ return c.statut === "validee"; }).length;
+      dire("Fichier supprimé." + (nb ? " Les " + nb + " client(s) déjà validé(s) gardent leur copie : révoquez leur accès dans l'onglet Commandes si nécessaire." : ""), "ok");
+      infoFichier();
+    }).catch(function(e){ dire(erreurFr(e), "err"); })
+    .then(function(){ b.disabled = false; });
+  });
   document.getElementById("fichierEnvoyer").addEventListener("click", function(){
     var inp = document.getElementById("fichierInput"), f = inp.files && inp.files[0], m = document.getElementById("fichierMsg"), b = this;
     var dire = function(t, cls){ m.hidden = false; m.className = "dl-msg " + (cls || ""); m.textContent = t; };
