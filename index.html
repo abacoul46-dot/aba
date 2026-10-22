@@ -616,6 +616,52 @@
     .float-wa{width:50px; height:50px; right:14px;}
     .float-wa svg{width:26px; height:26px;}
   }
+
+  /* ---------- Vidéo de démonstration ---------- */
+  .demo-btn{margin:-6px 0 14px; white-space:normal; text-align:left;}
+  .software-grid > *{min-width:0;}
+  .demo-btn svg{width:16px; height:16px;}
+  .demo-len{font-size:12px; font-weight:600; opacity:.8; background:rgba(255,255,255,.18); padding:2px 8px; border-radius:100px;}
+  .overlay.video-ov{align-items:center;}
+  .video-modal{max-width:960px; overflow:hidden;}
+  .video-head{padding:22px 64px 16px 24px;}
+  .video-head h3{font-size:20px;}
+  .video-head p:not(.eyebrow){font-size:14px; color:var(--text-2); margin-top:6px;}
+  #demoVideo{display:block; width:100%; aspect-ratio:16/9; background:#000;}
+  .video-foot{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:14px 24px 18px; font-size:14px; color:var(--text-2);}
+  @media (max-width:760px){
+    .overlay.video-ov{padding:12px;}
+    .video-modal{min-height:0 !important; border-radius:16px !important;}
+    .video-head{padding:16px 56px 12px 16px;}
+    .video-head h3{font-size:17px;}
+    .video-foot{padding:12px 16px 16px;}
+    .video-foot .btn{width:100%;}
+  }
+
+  .demo-btn{white-space:normal; text-align:left;}
+  .software-grid > *{min-width:0;}
+  .video-modal{max-height:calc(100vh - 24px); display:flex; flex-direction:column; overflow-y:auto !important;}
+  .video-modal > *{flex:none;}
+  #demoVideo{max-height:58vh; object-fit:contain;}
+  .chap-wrap{padding:14px 24px 4px; border-bottom:1px solid var(--border);}
+  .chap-label{font-size:12px; font-weight:600; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:10px;}
+  .chap-list{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:6px; padding-bottom:12px;}
+  .chap{display:flex; align-items:center; gap:9px; text-align:left; padding:8px 10px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-size:13.5px;}
+  .chap:hover{border-color:var(--blue-500);}
+  .chap-n{flex:none; width:22px; height:22px; border-radius:6px; background:var(--blue-100); color:var(--blue-600); font-size:11.5px; font-weight:700; display:flex; align-items:center; justify-content:center;}
+  .chap-t{flex:1; min-width:0; font-weight:500;}
+  .chap-time{font-family:var(--font-mono); font-size:11.5px; color:var(--text-3);}
+  .chap.on{background:var(--blue-600); border-color:var(--blue-600); color:#fff;}
+  .chap.on .chap-n{background:rgba(255,255,255,.2); color:#fff;}
+  .chap.on .chap-time{color:rgba(255,255,255,.8);}
+  @media (max-width:760px){
+    .chap-wrap{padding:12px 0 2px 16px;}
+    .chap-list{display:flex; overflow-x:auto; scroll-snap-type:x proximity; padding-right:16px; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
+    .chap-list::-webkit-scrollbar{display:none;}
+    .chap{flex:none; scroll-snap-align:start; padding:9px 12px;}
+    .chap-t{white-space:nowrap;}
+    .video-head p:not(.eyebrow){display:none;}
+  }
 </style>
 
 </head>
@@ -711,7 +757,7 @@
       <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3.3"/><path d="M2.5 20c0-3.3 2.7-5.8 6-5.8s6 2.5 6 5.8"/><circle cx="17" cy="8.5" r="2.5"/><path d="M15.8 14.3c2.6.3 4.7 2.5 4.7 5.4"/></svg></div>
       <h3>Gestion RH &amp; Paie</h3>
       <p>Des solutions permettant de gérer efficacement les salariés, les contrats, les congés, les absences et la paie.</p>
-      <span class="feature-more">Découvrir le logiciel →</span>
+      <span class="feature-more" data-demo="rh">▶ Voir la démo vidéo</span>
     </a>
     <a class="feature-card" href="#logiciels">
       <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
@@ -1019,6 +1065,27 @@
           <ul id="pdWhy"></ul>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ VIDÉO DE DÉMONSTRATION ============ -->
+<div class="overlay video-ov" id="videoOverlay">
+  <div class="modal video-modal" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+    <button class="modal-close" id="videoClose" aria-label="Fermer la vidéo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="video-head">
+      <p class="eyebrow" style="margin-bottom:6px;">Démonstration · 6 min 30</p>
+      <h3 id="videoTitle">Logiciel de gestion RH &amp; Paie</h3>
+      <p>Saisie du personnel, paie, net négocié, heures sup, départs, bulletins, documents et tableau de bord.</p>
+    </div>
+    <video id="demoVideo" controls playsinline preload="none" poster="video/demo-logiciel-rh.jpg"></video>
+    <div class="chap-wrap">
+      <p class="chap-label">Aller directement à une partie</p>
+      <div class="chap-list" id="chapList"></div>
+    </div>
+    <div class="video-foot">
+      <span>Intéressé ? Nous l'installons et vous formons à son utilisation.</span>
+      <a class="btn btn-whatsapp" id="videoWa" target="_blank" rel="noopener">Demander le logiciel</a>
     </div>
   </div>
 </div>
@@ -1700,6 +1767,7 @@
         '<ul class="software-list">'+
           s.features.map(function(f){ return '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>'+f+'</li>'; }).join("")+
         '</ul>'+
+        (s.id === "rh-paie" ? '<button type="button" class="btn btn-primary btn-block demo-btn" data-demo="rh"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Voir la vidéo de démonstration <span class="demo-len">6 min</span></button>' : '')+
         '<div class="software-actions">'+
           '<a class="btn btn-outline" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Demander une démonstration</a>'+
           '<a class="btn btn-whatsapp" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Contacter sur WhatsApp</a>'+
@@ -1707,6 +1775,66 @@
       wrap.appendChild(card);
     });
   }
+
+  /* Vidéo de démonstration du logiciel RH : chargée seulement à l'ouverture */
+  /* Version légère (720p, 10 Mo) sur téléphone ou en mode économie de données,
+     version HD (1080p, 19 Mo) sur ordinateur. */
+  var leger = window.innerWidth < 1000 || (navigator.connection && navigator.connection.saveData);
+  var DEMO_SRC = leger ? "video/demo-logiciel-rh-720p.mp4" : "video/demo-logiciel-rh.mp4";
+  var CHAPITRES = [
+    [17.25, "Présentation"], [37.5, "Nouveaux salariés"], [93.75, "Éléments de paie"], [126, "Calcul à l'envers"],
+    [155.5, "Heures supplémentaires"], [195.25, "Départs"], [212.5, "Bulletins de paie"], [253.75, "Attestation et certificat"],
+    [287.75, "Tableau de bord"], [320.25, "Paramètres"], [363.5, "Supprimer un salarié"]
+  ];
+  function mmss(t){ t = Math.floor(t); return Math.floor(t/60) + ":" + String(t%60).padStart(2, "0"); }
+  (function(){
+    var list = document.getElementById("chapList"), v = document.getElementById("demoVideo");
+    CHAPITRES.forEach(function(c, i){
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "chap";
+      b.innerHTML = '<span class="chap-n">' + (i + 1) + '</span><span class="chap-t">' + c[1] + '</span><span class="chap-time">' + mmss(c[0]) + '</span>';
+      b.addEventListener("click", function(){
+        if(!v.getAttribute("src")) v.setAttribute("src", DEMO_SRC);
+        var aller = function(){ v.currentTime = c[0]; var pr = v.play(); if(pr && pr.catch) pr.catch(function(){}); };
+        if(v.readyState >= 1) aller(); else v.addEventListener("loadedmetadata", aller, {once:true});
+      });
+      list.appendChild(b);
+    });
+    var courant = -1;
+    v.addEventListener("timeupdate", function(){
+      var k = -1;
+      CHAPITRES.forEach(function(c, i){ if(v.currentTime >= c[0] - 0.2) k = i; });
+      if(k === courant) return;
+      courant = k;
+      list.querySelectorAll(".chap").forEach(function(b, i){ b.classList.toggle("on", i === k); });
+      var on = list.querySelector(".chap.on");
+      if(on && list.scrollWidth > list.clientWidth) list.scrollTo({left: on.offsetLeft - 16, behavior: "smooth"});
+    });
+  })();
+  function openDemoVideo(){
+    var ov = document.getElementById("videoOverlay"), v = document.getElementById("demoVideo");
+    var rh = effectiveSoftware().filter(function(x){ return x.id === "rh-paie"; })[0];
+    document.getElementById("videoWa").href = waLink(rh ? rh.waMessage : "Bonjour ABA-GROUP, j'ai vu la démonstration du logiciel de gestion RH & Paie et je suis intéressé.");
+    if(!v.getAttribute("src")) v.setAttribute("src", DEMO_SRC);
+    ov.classList.add("open");
+    document.body.style.overflow = "hidden";
+    var pr = v.play(); if(pr && pr.catch) pr.catch(function(){});
+  }
+  function closeDemoVideo(){
+    var v = document.getElementById("demoVideo");
+    v.pause();
+    document.getElementById("videoOverlay").classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  document.addEventListener("click", function(e){
+    var b = e.target.closest && e.target.closest("[data-demo]");
+    if(b){ e.preventDefault(); openDemoVideo(); }
+  });
+  document.getElementById("videoClose").addEventListener("click", closeDemoVideo);
+  document.getElementById("videoOverlay").addEventListener("click", function(e){ if(e.target === this) closeDemoVideo(); });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && document.getElementById("videoOverlay").classList.contains("open")) closeDemoVideo();
+  });
 
   /* =========================================================
      RENDU — SERVICES
