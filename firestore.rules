@@ -1,0 +1,55 @@
+rules_version = '2';
+// Règles de sécurité Firestore du site ABA-GROUP.
+// À copier dans : Console Firebase > Firestore Database > Règles > Publier.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Le compte administrateur (connexion avec le code d'accès du site)
+    function estAdmin() {
+      return request.auth != null && request.auth.token.email == "abacoul46@gmail.com";
+    }
+
+    // Catalogue du site (ordinateurs, logiciels, services) : lu par tous, modifié par l'admin
+    match /catalog/{doc} {
+      allow read: if true;
+      allow write: if estAdmin();
+    }
+
+    // Commandes du logiciel : un visiteur peut créer une commande « en attente »
+    // et relire la sienne (son identifiant aléatoire sert de secret).
+    // Seul l'admin peut lister, valider, refuser ou supprimer.
+    match /commandes/{id} {
+      allow create: if request.resource.data.keys().hasOnly(['logiciel', 'prix', 'nom', 'telephone', 'payeur', 'email', 'reference', 'statut', 'creeLe'])
+                    && request.resource.data.keys().hasAll(['logiciel', 'prix', 'nom', 'telephone', 'payeur', 'reference', 'statut', 'creeLe'])
+                    && request.resource.data.statut == 'en_attente'
+                    && request.resource.data.logiciel == 'rh-paie'
+                    && request.resource.data.prix == 150000
+                    && request.resource.data.nom is string && request.resource.data.nom.size() >= 2 && request.resource.data.nom.size() <= 80
+                    && request.resource.data.telephone is string && request.resource.data.telephone.size() >= 8 && request.resource.data.telephone.size() <= 20
+                    && request.resource.data.payeur is string && request.resource.data.payeur.size() >= 8 && request.resource.data.payeur.size() <= 20
+                    && request.resource.data.reference is string && request.resource.data.reference.size() >= 3 && request.resource.data.reference.size() <= 60
+                    && (!('email' in request.resource.data) || (request.resource.data.email is string && request.resource.data.email.size() <= 80))
+                    && request.resource.data.creeLe == request.time;
+      allow get: if true;
+      allow list, update, delete: if estAdmin();
+    }
+
+    // Fichier d'origine du logiciel : réservé à l'admin
+    match /fichiers/{f} {
+      allow read, write: if estAdmin();
+      match /parts/{n} {
+        allow read, write: if estAdmin();
+      }
+    }
+
+    // Copie remise à un client validé : ouverte à qui connaît le code (impossible de lister les codes)
+    match /telechargements/{code} {
+      allow get: if true;
+      allow list, write: if estAdmin();
+      match /parts/{n} {
+        allow get: if true;
+        allow list, write: if estAdmin();
+      }
+    }
+  }
+}

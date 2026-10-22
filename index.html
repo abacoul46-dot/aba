@@ -662,6 +662,84 @@
     .chap-t{white-space:nowrap;}
     .video-head p:not(.eyebrow){display:none;}
   }
+
+  [hidden]{display:none !important;}
+  /* ---------- Vente en ligne ---------- */
+  .btn-om{background:#FF7900; color:#fff; box-shadow:var(--shadow-sm);}
+  .btn-om:hover{background:#E86E00;}
+  .btn-om:disabled,.btn:disabled{opacity:.6; cursor:not-allowed;}
+  .soft-buy{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; background:var(--surface-2); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin-bottom:14px;}
+  .soft-price span{display:block; font-size:12px; color:var(--text-3); font-weight:600; text-transform:uppercase; letter-spacing:.05em;}
+  .soft-price b{font-family:var(--font-mono); font-size:22px;}
+  .soft-price small{display:block; font-size:12px; color:var(--text-3); margin-top:2px;}
+  .achat-modal{max-width:560px;}
+  .achat-head{padding:22px 64px 14px 24px; border-bottom:1px solid var(--border);}
+  .achat-head h3{font-size:20px;}
+  .achat-prix{font-family:var(--font-mono); font-weight:700; font-size:22px; color:#E86E00; margin-top:6px;}
+  .achat-body{padding:18px 24px 22px;}
+  .achat-steps{margin:0 0 18px; padding-left:20px; display:grid; gap:12px; font-size:14.5px; color:var(--text-2);}
+  .achat-steps b{color:var(--text);}
+  .achat-steps small{display:block; color:var(--text-3); margin-top:4px;}
+  .om-num{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:8px;}
+  .om-num span{font-family:var(--font-mono); font-weight:700; font-size:24px; color:var(--text); letter-spacing:.04em; background:#FFF1E5; border:1px dashed #FF7900; border-radius:10px; padding:6px 14px;}
+  .achat-form{display:grid; grid-template-columns:1fr; gap:0;}
+  .achat-form .field{min-width:0;}
+  .achat-form input{width:100%; min-width:0;}
+  .admin-tab{white-space:nowrap; flex:none;}
+  .admin-tabs{overflow-x:auto;}
+  .demo-len{white-space:nowrap;}
+  .demo-btn{justify-content:flex-start;}
+  .achat-form .field{margin-bottom:12px;}
+  .achat-form .field.full,.achat-form .btn,.achat-form .form-note,.achat-form .dl-msg{grid-column:1/-1;}
+  .achat-form input{padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:var(--bg); color:var(--text);}
+  .achat-link{display:inline-block; margin-top:14px; font-size:14px; font-weight:600; color:var(--blue-600);}
+  .suivi p{font-size:14.5px; color:var(--text-2); margin:10px 0;}
+  .suivi .btn{margin-top:6px;}
+  .achat-body .btn,.dl-help .btn,.cmd-actions .btn{white-space:normal; text-align:center;}
+  .suivi-etat{display:flex; align-items:center; gap:10px; font-weight:700; font-size:17px;}
+  .suivi-etat.ok{color:#16A34A;} .suivi-etat.err{color:var(--danger);} .suivi-etat.wait{color:var(--text);}
+  .spin{width:18px; height:18px; border:3px solid var(--blue-100); border-top-color:var(--blue-600); border-radius:50%; animation:tourne .8s linear infinite; flex:none;}
+  @keyframes tourne{to{transform:rotate(360deg);}}
+  .code-box{font-family:var(--font-mono); font-weight:700; font-size:20px; letter-spacing:.06em; text-align:center; padding:14px; border-radius:12px; background:var(--blue-100); color:var(--blue-600); border:1px dashed var(--blue-500); margin:6px 0 12px; user-select:all; word-break:break-all;}
+  .dl-msg{font-size:13.5px; line-height:1.5; border-radius:10px; padding:10px 12px; margin-top:12px; background:var(--surface-2); color:var(--text-2);}
+  .dl-msg.ok{background:#DCFCE7; color:#14532D;} .dl-msg.err{background:var(--warn-soft, #FDECEA); color:var(--danger);}
+  .dl-container{max-width:760px;}
+  .dl-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; box-shadow:var(--shadow-sm);}
+  .dl-form{display:flex; gap:12px; align-items:flex-end; flex-wrap:wrap;}
+  .dl-form .field{flex:1 1 260px; margin:0;}
+  .dl-form input{padding:13px 14px; border-radius:10px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-family:var(--font-mono); letter-spacing:.04em; text-transform:uppercase;}
+  .dl-sub{font-size:16px; margin:30px 0 12px;}
+  .cmd-row{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; background:var(--surface); border:1px solid var(--border); border-radius:12px; margin-bottom:8px;}
+  .cmd-row b{display:block; font-size:14.5px;} .cmd-row span{font-size:13px; color:var(--text-3);}
+  .st{font-style:normal; font-weight:700;} .st-en_attente{color:#B45309;} .st-validee{color:#16A34A;} .st-refusee,.st-revoquee{color:var(--danger);}
+  .dl-help{margin-top:30px; padding:20px; border-radius:var(--radius-md); background:var(--surface-2); display:grid; gap:6px; font-size:14.5px; color:var(--text-2);}
+  .dl-help b{color:var(--text);}
+  .dl-help-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;}
+  .video-foot-actions{display:flex; gap:8px; flex-wrap:wrap;}
+  .tab-count{display:inline-flex; align-items:center; justify-content:center; min-width:20px; height:20px; padding:0 6px; border-radius:100px; background:#FF7900; color:#fff; font-size:11px; margin-left:4px;}
+  .cmd-filtres{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;}
+  .chip{border:1px solid var(--border); background:var(--surface); color:var(--text-2); border-radius:100px; padding:6px 12px; font-size:13px; font-weight:600;}
+  .chip.on{background:var(--blue-600); border-color:var(--blue-600); color:#fff;}
+  .cmd-item{border:1px solid var(--border); border-radius:12px; padding:14px; margin-bottom:10px;}
+  .cmd-top{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:14.5px;}
+  .cmd-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:8px 14px; margin:10px 0; font-size:12px; color:var(--text-3);}
+  .cmd-grid b{display:block; color:var(--text); font-size:13.5px; font-weight:600; word-break:break-word;}
+  .cmd-grid .mono{font-family:var(--font-mono);}
+  .cmd-actions{display:flex; gap:8px; flex-wrap:wrap;}
+  .cmd-actions .btn{padding:8px 12px; font-size:13px;}
+  @media (max-width:760px){
+    .achat-modal{min-height:0 !important; border-radius:16px !important;}
+    .overlay.video-ov#achatOverlay{align-items:flex-start; padding:10px;}
+    .achat-head{padding:16px 56px 12px 16px;}
+    .achat-body{padding:14px 16px 18px;}
+    .achat-form{grid-template-columns:1fr;}
+    .om-num span{font-size:21px;}
+    .dl-card{padding:18px 16px;}
+    .dl-form .btn{width:100%;}
+    .soft-buy .btn{width:100%;}
+    .video-foot-actions{width:100%;} .video-foot-actions .btn{flex:1;}
+    .cmd-row{flex-wrap:wrap;} .cmd-row .btn{width:100%;}
+  }
 </style>
 
 </head>
@@ -703,6 +781,7 @@
     <a href="#services" data-close data-page-link="services">Services</a>
     <a href="#apropos" data-close data-page-link="apropos">À propos</a>
     <a href="#contact" data-close data-page-link="contact">Contact</a>
+    <a href="#telechargement" data-close data-page-link="telechargement">Mon téléchargement</a>
     <a class="btn btn-whatsapp btn-block" id="waNavMobile" target="_blank" rel="noopener">Commander sur WhatsApp</a>
   </div>
 </nav>
@@ -939,6 +1018,37 @@
     </div>
   </div>
 </section>
+
+<!-- ============ MON TÉLÉCHARGEMENT ============ -->
+<section class="section page" data-page="telechargement">
+  <div class="container dl-container">
+    <div class="section-head">
+      <p class="eyebrow">Espace client</p>
+      <h2>Mon téléchargement</h2>
+      <p>Après validation de votre paiement Orange Money, saisissez ici votre code pour télécharger le logiciel. Le code vous est aussi envoyé sur WhatsApp.</p>
+    </div>
+    <div class="dl-card">
+      <form id="dlForm" class="dl-form">
+        <div class="field"><label for="dlCode">Code de téléchargement</label>
+          <input id="dlCode" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="RH-XXXX-XXXX-XXXX-XXXX" required></div>
+        <button type="submit" class="btn btn-primary" id="dlBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Télécharger</button>
+      </form>
+      <p class="dl-msg" id="dlMsg" hidden></p>
+    </div>
+    <div id="mesCmdWrap" hidden>
+      <h3 class="dl-sub">Mes commandes sur cet appareil</h3>
+      <div id="mesCmdList"></div>
+    </div>
+    <div class="dl-help">
+      <b>Pas encore de code ?</b>
+      <span>Achetez le logiciel depuis la page Logiciels, ou écrivez-nous sur WhatsApp au 69 17 93 70.</span>
+      <div class="dl-help-actions">
+        <button type="button" class="btn btn-om" data-acheter>Acheter le logiciel RH</button>
+        <a class="btn btn-outline" href="#logiciels">Voir les logiciels</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -966,6 +1076,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#telechargement">Mon téléchargement</a></li>
         </ul>
       </div>
       <div>
@@ -1069,6 +1180,19 @@
   </div>
 </div>
 
+<!-- ============ ACHAT EN LIGNE ============ -->
+<div class="overlay video-ov" id="achatOverlay">
+  <div class="modal achat-modal" role="dialog" aria-modal="true" aria-labelledby="achatTitle">
+    <button class="modal-close" id="achatClose" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="achat-head">
+      <p class="eyebrow" style="margin-bottom:6px;">Achat en ligne · Orange Money</p>
+      <h3 id="achatTitle">Logiciel de gestion RH &amp; Paie</h3>
+      <div class="achat-prix" id="achatPrix"></div>
+    </div>
+    <div class="achat-body" id="achatBody"></div>
+  </div>
+</div>
+
 <!-- ============ VIDÉO DE DÉMONSTRATION ============ -->
 <div class="overlay video-ov" id="videoOverlay">
   <div class="modal video-modal" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
@@ -1084,8 +1208,11 @@
       <div class="chap-list" id="chapList"></div>
     </div>
     <div class="video-foot">
-      <span>Intéressé ? Nous l'installons et vous formons à son utilisation.</span>
-      <a class="btn btn-whatsapp" id="videoWa" target="_blank" rel="noopener">Demander le logiciel</a>
+      <span>Convaincu ? Achetez-le en ligne et téléchargez-le dès la validation du paiement.</span>
+      <div class="video-foot-actions">
+        <a class="btn btn-outline" id="videoWa" target="_blank" rel="noopener">Une question ?</a>
+        <button type="button" class="btn btn-om" data-acheter>Acheter — 150 000 FCFA</button>
+      </div>
     </div>
   </div>
 </div>
@@ -1124,12 +1251,32 @@
       <button class="modal-close" id="adminPanelClose" style="position:static;" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <div class="admin-tabs">
+      <button class="admin-tab" data-tab="commandes">Commandes <span class="tab-count" id="cmdCount" hidden></span></button>
+      <button class="admin-tab" data-tab="fichier">Fichier du logiciel</button>
       <button class="admin-tab active" data-tab="products">Ordinateurs</button>
       <button class="admin-tab" data-tab="software">Logiciels</button>
       <button class="admin-tab" data-tab="services">Services</button>
       <button class="admin-tab" data-tab="export">Exporter</button>
     </div>
     <div class="admin-body">
+      <div class="admin-pane" id="pane-commandes">
+        <div class="cmd-filtres" id="cmdFiltres">
+          <button type="button" class="chip on" data-f="en_attente">En attente</button>
+          <button type="button" class="chip" data-f="validee">Validées</button>
+          <button type="button" class="chip" data-f="refusee">Refusées</button>
+          <button type="button" class="chip" data-f="tout">Toutes</button>
+        </div>
+        <p class="admin-note" style="margin:0 0 14px;">Avant de valider, vérifiez sur le téléphone 72 21 02 16 que le SMS Orange Money correspond (montant, numéro qui a payé et référence). La validation crée le code du client et lui ouvre le téléchargement.</p>
+        <div id="cmdList"></div>
+      </div>
+      <div class="admin-pane" id="pane-fichier">
+        <div id="fichierInfo" class="admin-note" style="margin:0 0 14px;">Chargement…</div>
+        <div class="field full"><label for="fichierInput">Nouveau fichier du logiciel (classeur Excel .xlsm/.xlsx, ou .zip)</label>
+          <input id="fichierInput" type="file" accept=".xlsm,.xlsx,.xls,.zip,.rar,.exe"></div>
+        <button type="button" class="btn btn-primary" id="fichierEnvoyer" style="margin-top:12px;">Mettre ce fichier en ligne</button>
+        <p class="dl-msg" id="fichierMsg" hidden></p>
+        <p class="form-note" style="margin-top:12px;">Le fichier n'est jamais visible par les visiteurs : chaque client validé reçoit sa propre copie, ouverte par son code. Les clients déjà validés gardent la version qu'ils ont reçue. Taille conseillée : moins de 10 Mo.</p>
+      </div>
       <div class="admin-pane active" id="pane-products">
         <div id="adminProductList"></div>
         <h4 id="adminProductFormTitle" style="margin:22px 0 4px;font-size:14px;">Ajouter un ordinateur</h4>
@@ -1768,6 +1915,7 @@
           s.features.map(function(f){ return '<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>'+f+'</li>'; }).join("")+
         '</ul>'+
         (s.id === "rh-paie" ? '<button type="button" class="btn btn-primary btn-block demo-btn" data-demo="rh"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Voir la vidéo de démonstration <span class="demo-len">6 min</span></button>' : '')+
+        (s.id === VENTE.id ? '<div class="soft-buy"><div class="soft-price"><span>Prix</span><b>'+fcfa(VENTE.prix)+'</b><small>Paiement Orange Money · téléchargement immédiat après validation</small></div><button type="button" class="btn btn-om" data-acheter>Acheter et télécharger</button></div>' : '')+
         '<div class="software-actions">'+
           '<a class="btn btn-outline" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Demander une démonstration</a>'+
           '<a class="btn btn-whatsapp" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Contacter sur WhatsApp</a>'+
@@ -1835,6 +1983,211 @@
   document.addEventListener("keydown", function(e){
     if(e.key === "Escape" && document.getElementById("videoOverlay").classList.contains("open")) closeDemoVideo();
   });
+
+
+  /* =========================================================
+     VENTE EN LIGNE DU LOGICIEL RH
+     Paiement Orange Money au 72 21 02 16, validé par l'administrateur.
+     Firestore :
+       commandes/{id}                 commande du client (id aléatoire = secret)
+       fichiers/rh-paie (+ /parts)    fichier d'origine — lisible par l'admin seul
+       telechargements/{code} (+ /parts)  copie remise au client à la validation
+     Les règles de sécurité sont dans le fichier firestore.rules du dépôt.
+  ========================================================= */
+  var VENTE = { id: "rh-paie", nom: "Logiciel de gestion RH & Paie", prix: 150000, om: "72 21 02 16" };
+  var MORCEAU = 700000;               /* caractères base64 par document (< 1 Mo) */
+  var LS_CMD = "aba-commandes-v1";
+  var SITE_URL = "https://abacoul46-dot.github.io/aba/";
+  function fdb(){ return (fsReady && window.firebase && firebase.firestore) ? firebase.firestore() : null; }
+  function fcfa(n){ return String(Math.round(Number(n) || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " FCFA"; }
+  function esc(v){ return String(v == null ? "" : v).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function numCmd(id){ return String(id || "").slice(0, 6).toUpperCase(); }
+  function quand(ts){ try{ var d = ts && ts.toDate ? ts.toDate() : null; return d ? d.toLocaleDateString("fr-FR") + " " + d.toLocaleTimeString("fr-FR", {hour:"2-digit", minute:"2-digit"}) : "à l'instant"; }catch(e){ return ""; } }
+  function telWa(t){ var d = String(t || "").replace(/\D/g, ""); if(d.length === 8) d = "223" + d; if(d.indexOf("00") === 0) d = d.slice(2); return d; }
+  function lienClient(code){ return SITE_URL + "#telechargement?code=" + encodeURIComponent(code); }
+  function mesCommandes(){ try{ return JSON.parse(localStorage.getItem(LS_CMD)) || []; }catch(e){ return []; } }
+  function memoriser(id){ var l = mesCommandes().filter(function(x){ return x !== id; }); l.unshift(id); try{ localStorage.setItem(LS_CMD, JSON.stringify(l.slice(0, 10))); }catch(e){} }
+  function genCode(){
+    var A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = new Uint32Array(16), s = "RH";
+    crypto.getRandomValues(r);
+    for(var i = 0; i < 16; i++){ if(i % 4 === 0) s += "-"; s += A[r[i] % 32]; }
+    return s;
+  }
+  function normCode(v){
+    var c = String(v || "").toUpperCase().replace(/[^A-Z0-9]/g, "").replace(/^RH/, "");
+    return c.length === 16 ? "RH-" + c.match(/.{4}/g).join("-") : "";
+  }
+  function erreurFr(e){
+    var c = (e && e.code) || "";
+    if(c.indexOf("permission-denied") >= 0) return "Accès refusé par la base en ligne (règles de sécurité Firebase à mettre à jour, ou session administrateur expirée).";
+    if(c.indexOf("unavailable") >= 0) return "Pas de connexion internet. Réessayez dans un instant.";
+    return "Une erreur est survenue (" + (c || (e && e.message) || "inconnue") + "). Réessayez.";
+  }
+  function enregistrer(nom, type, morceaux){
+    var bin = morceaux.map(function(b64){ var t = atob(b64), u = new Uint8Array(t.length); for(var i = 0; i < t.length; i++) u[i] = t.charCodeAt(i); return u; });
+    var url = URL.createObjectURL(new Blob(bin, {type: type || "application/octet-stream"}));
+    var a = document.createElement("a"); a.href = url; a.download = nom || "Logiciel-RH-ABA-GROUP.xlsm";
+    document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(url); a.remove(); }, 2000);
+  }
+  /* Téléchargement avec un code validé */
+  function telecharger(code, msg, btn){
+    var d = fdb();
+    function dire(t, cls){ if(!msg) return; msg.hidden = false; msg.className = "dl-msg " + (cls || ""); msg.textContent = t; }
+    if(!d){ dire("Le téléchargement nécessite une connexion internet. Vérifiez la connexion puis rechargez la page.", "err"); return Promise.resolve(); }
+    if(btn) btn.disabled = true;
+    dire("Vérification du code…");
+    var ref = d.collection("telechargements").doc(code);
+    return ref.get().then(function(snap){
+      if(!snap.exists){ var e = new Error("code"); e.code = "code-inconnu"; throw e; }
+      var m = snap.data(), lots = [];
+      for(var i = 0; i < m.parts; i++) lots.push(ref.collection("parts").doc(String(i)).get());
+      dire("Téléchargement en cours (" + Math.round((m.taille || 0) / 1024) + " Ko)…");
+      return Promise.all(lots).then(function(ps){
+        enregistrer(m.nom, m.type, ps.map(function(p){ return p.data().d; }));
+        dire("Téléchargement lancé : « " + m.nom + " ». Retrouvez-le dans le dossier Téléchargements de votre appareil.", "ok");
+      });
+    }).catch(function(e){
+      dire(e && e.code === "code-inconnu" ? "Ce code n'existe pas ou a été désactivé. Vérifiez-le, ou contactez-nous sur WhatsApp au 69 17 93 70." : erreurFr(e), "err");
+    }).then(function(){ if(btn) btn.disabled = false; });
+  }
+
+  /* ---------- Fenêtre d'achat ---------- */
+  var achatSuivi = null;
+  function fermerAchat(){
+    document.getElementById("achatOverlay").classList.remove("open");
+    document.body.style.overflow = "";
+    if(achatSuivi){ achatSuivi(); achatSuivi = null; }
+  }
+  function ouvrirAchat(){
+    if(document.getElementById("videoOverlay").classList.contains("open")) closeDemoVideo();
+    document.getElementById("achatPrix").textContent = fcfa(VENTE.prix);
+    etapePaiement();
+    document.getElementById("achatOverlay").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function etapePaiement(){
+    var b = document.getElementById("achatBody");
+    b.innerHTML =
+      '<ol class="achat-steps">'+
+        '<li><b>Envoyez ' + fcfa(VENTE.prix) + ' par Orange Money</b> au numéro'+
+          '<div class="om-num"><span>' + VENTE.om + '</span><button type="button" class="btn btn-outline btn-sm" id="omCopy">Copier le numéro</button></div>'+
+          '<small>Bénéficiaire : ABA-GROUP. Faites le transfert depuis votre menu Orange Money.</small></li>'+
+        '<li><b>Gardez le SMS de confirmation</b> d\'Orange Money : il contient la référence de la transaction.</li>'+
+        '<li><b>Remplissez ce formulaire</b>. Dès que nous avons vérifié le paiement, votre code de téléchargement s\'affiche ici et vous est envoyé sur WhatsApp.</li>'+
+      '</ol>'+
+      '<form id="achatForm" class="achat-form">'+
+        '<div class="field"><label for="acNom">Nom complet ou entreprise</label><input id="acNom" required maxlength="80" autocomplete="name"></div>'+
+        '<div class="field"><label for="acTel">Votre numéro WhatsApp</label><input id="acTel" type="tel" required maxlength="20" placeholder="Ex. 76 00 00 00" autocomplete="tel"></div>'+
+        '<div class="field"><label for="acPayeur">Numéro Orange Money qui a payé</label><input id="acPayeur" type="tel" required maxlength="20" placeholder="Ex. 72 00 00 00"></div>'+
+        '<div class="field"><label for="acRef">Référence de la transaction (dans le SMS)</label><input id="acRef" required maxlength="60" autocomplete="off" placeholder="Ex. CI241022.1234.A12345"></div>'+
+        '<div class="field full"><label for="acMail">E-mail (facultatif)</label><input id="acMail" type="email" maxlength="80" autocomplete="email"></div>'+
+        '<p class="dl-msg err" id="acErr" hidden></p>'+
+        '<button type="submit" class="btn btn-om btn-block" id="acGo">J\'ai payé — envoyer ma commande</button>'+
+        '<p class="form-note">Montant : ' + fcfa(VENTE.prix) + '. La vérification est faite par ABA-GROUP, généralement en quelques minutes aux heures de bureau.</p>'+
+      '</form>'+
+      '<a class="achat-link" href="#telechargement" id="achatDejaCode">J\'ai déjà un code de téléchargement →</a>';
+    document.getElementById("omCopy").addEventListener("click", function(){
+      var bt = this, ok = function(){ bt.textContent = "Numéro copié ✓"; setTimeout(function(){ bt.textContent = "Copier le numéro"; }, 1800); };
+      try{ navigator.clipboard.writeText(VENTE.om.replace(/\s/g, "")).then(ok, ok); }catch(e){ ok(); }
+    });
+    document.getElementById("achatDejaCode").addEventListener("click", fermerAchat);
+    document.getElementById("achatForm").addEventListener("submit", function(ev){
+      ev.preventDefault();
+      var err = document.getElementById("acErr"), go = document.getElementById("acGo");
+      var v = function(id){ return document.getElementById(id).value.trim(); };
+      err.hidden = true;
+      if(v("acTel").replace(/\D/g, "").length < 8 || v("acPayeur").replace(/\D/g, "").length < 8){ err.textContent = "Vérifiez les numéros de téléphone (8 chiffres minimum)."; err.hidden = false; return; }
+      var d = fdb();
+      if(!d){ err.textContent = "Connexion internet nécessaire pour envoyer la commande. Vérifiez la connexion puis rechargez la page."; err.hidden = false; return; }
+      var cmd = { logiciel: VENTE.id, prix: VENTE.prix, nom: v("acNom"), telephone: v("acTel"), payeur: v("acPayeur"),
+                  reference: v("acRef"), statut: "en_attente", creeLe: firebase.firestore.FieldValue.serverTimestamp() };
+      if(v("acMail")) cmd.email = v("acMail");
+      go.disabled = true; go.textContent = "Envoi…";
+      var ref = d.collection("commandes").doc();
+      ref.set(cmd).then(function(){
+        memoriser(ref.id);
+        etapeSuivi(ref.id, cmd);
+      }).catch(function(e){
+        err.textContent = erreurFr(e); err.hidden = false;
+        go.disabled = false; go.textContent = "J'ai payé — envoyer ma commande";
+      });
+    });
+  }
+  function etapeSuivi(id, cmd){
+    var b = document.getElementById("achatBody"), d = fdb();
+    var waMsg = "Bonjour ABA-GROUP, je viens de payer " + fcfa(VENTE.prix) + " par Orange Money pour le " + VENTE.nom +
+      ". Commande n° " + numCmd(id) + ", référence de transaction : " + cmd.reference + ". Merci de valider.";
+    b.innerHTML = '<div class="suivi" id="suivi"></div>';
+    function afficher(c){
+      var z = document.getElementById("suivi"); if(!z) return;
+      if(c.statut === "validee" && c.code){
+        z.innerHTML = '<div class="suivi-etat ok">Paiement validé ✓</div>'+
+          '<p>Commande n° <b>' + numCmd(id) + '</b>. Votre code de téléchargement :</p>'+
+          '<div class="code-box">' + esc(c.code) + '</div>'+
+          '<button type="button" class="btn btn-primary btn-block" id="suiviDl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Télécharger le logiciel</button>'+
+          '<p class="dl-msg" id="suiviMsg" hidden></p>'+
+          '<p class="form-note">Notez ce code : il vous permet de télécharger à nouveau le logiciel depuis « Mon téléchargement ».</p>';
+        document.getElementById("suiviDl").addEventListener("click", function(){ telecharger(c.code, document.getElementById("suiviMsg"), this); });
+      } else if(c.statut === "refusee"){
+        z.innerHTML = '<div class="suivi-etat err">Paiement non retrouvé</div>'+
+          '<p>Nous n\'avons pas pu confirmer le paiement de la commande n° <b>' + numCmd(id) + '</b>' + (c.motif ? ' : ' + esc(c.motif) : '.') + '</p>'+
+          '<a class="btn btn-whatsapp btn-block" target="_blank" rel="noopener" href="' + waLink("Bonjour ABA-GROUP, ma commande n° " + numCmd(id) + " (référence " + cmd.reference + ") n'a pas été validée. Pouvez-vous m'aider ?") + '">Nous contacter sur WhatsApp</a>';
+      } else if(c.statut === "revoquee"){
+        z.innerHTML = '<div class="suivi-etat err">Accès désactivé</div><p>Le code de cette commande a été désactivé. Contactez ABA-GROUP sur WhatsApp au 69 17 93 70.</p>';
+      } else {
+        z.innerHTML = '<div class="suivi-etat wait"><span class="spin"></span>Paiement en cours de vérification</div>'+
+          '<p>Commande n° <b>' + numCmd(id) + '</b> enregistrée. Cette fenêtre se mettra à jour toute seule dès la validation.</p>'+
+          '<p>Vous pouvez aussi la fermer : retrouvez votre commande plus tard dans <a href="#telechargement" class="suivi-lien">Mon téléchargement</a>.</p>'+
+          '<a class="btn btn-whatsapp btn-block" target="_blank" rel="noopener" href="' + waLink(waMsg) + '">Prévenir ABA-GROUP sur WhatsApp (plus rapide)</a>';
+        var l = z.querySelector(".suivi-lien"); if(l) l.addEventListener("click", fermerAchat);
+      }
+    }
+    afficher(cmd);
+    if(achatSuivi) achatSuivi();
+    achatSuivi = d ? d.collection("commandes").doc(id).onSnapshot(function(sn){ if(sn.exists) afficher(sn.data()); }, function(){}) : null;
+  }
+  document.addEventListener("click", function(e){
+    var b = e.target.closest && e.target.closest("[data-acheter]");
+    if(b){ e.preventDefault(); ouvrirAchat(); }
+  });
+  document.getElementById("achatClose").addEventListener("click", fermerAchat);
+  document.getElementById("achatOverlay").addEventListener("click", function(e){ if(e.target === this) fermerAchat(); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape" && document.getElementById("achatOverlay").classList.contains("open")) fermerAchat(); });
+
+  /* ---------- Page « Mon téléchargement » ---------- */
+  var suivisPage = [];
+  function pageTelechargement(){
+    var h = location.hash || "";
+    if(h.split("?")[0] !== "#telechargement") return;
+    var m = /[?&]code=([^&]+)/.exec(h);
+    if(m) document.getElementById("dlCode").value = normCode(decodeURIComponent(m[1])) || decodeURIComponent(m[1]);
+    suivisPage.forEach(function(u){ u(); }); suivisPage = [];
+    var ids = mesCommandes(), wrap = document.getElementById("mesCmdWrap"), list = document.getElementById("mesCmdList"), d = fdb();
+    wrap.hidden = !ids.length || !d;
+    if(!ids.length || !d) return;
+    list.innerHTML = "";
+    ids.forEach(function(id){
+      var row = el("div", "cmd-row"); row.innerHTML = '<div><b>Commande n° ' + numCmd(id) + '</b><span>Chargement…</span></div>';
+      list.appendChild(row);
+      suivisPage.push(d.collection("commandes").doc(id).onSnapshot(function(sn){
+        if(!sn.exists){ row.remove(); return; }
+        var c = sn.data(), etat = {en_attente:"En attente de validation", validee:"Validée", refusee:"Paiement non retrouvé", revoquee:"Accès désactivé"}[c.statut] || c.statut;
+        row.innerHTML = '<div><b>Commande n° ' + numCmd(id) + ' · ' + fcfa(c.prix) + '</b><span>' + quand(c.creeLe) + ' · <em class="st st-' + c.statut + '">' + etat + '</em></span></div>' +
+          (c.statut === "validee" && c.code ? '<button type="button" class="btn btn-primary btn-sm">Télécharger</button>' : '');
+        var bt = row.querySelector("button");
+        if(bt) bt.addEventListener("click", function(){ document.getElementById("dlCode").value = c.code; telecharger(c.code, document.getElementById("dlMsg"), bt); });
+      }, function(){ row.querySelector("span").textContent = "Statut indisponible pour le moment."; }));
+    });
+  }
+  window.addEventListener("hashchange", pageTelechargement);
+  document.getElementById("dlForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var msg = document.getElementById("dlMsg"), code = normCode(document.getElementById("dlCode").value);
+    if(!code){ msg.hidden = false; msg.className = "dl-msg err"; msg.textContent = "Le code doit ressembler à RH-XXXX-XXXX-XXXX-XXXX (16 lettres ou chiffres après RH)."; return; }
+    document.getElementById("dlCode").value = code;
+    telecharger(code, msg, document.getElementById("dlBtn"));
+  });
+  setTimeout(pageTelechargement, 0);
 
   /* =========================================================
      RENDU — SERVICES
@@ -2054,10 +2407,12 @@
   });
   function openAdmin(){
     renderAdminLists();
+    demarrerAdminVente();
     document.getElementById("adminPanelOverlay").classList.add("open");
     document.getElementById("adminPanel").classList.add("open");
   }
   function closeAdmin(){
+    arreterAdminVente();
     document.getElementById("adminPanelOverlay").classList.remove("open");
     document.getElementById("adminPanel").classList.remove("open");
   }
@@ -2410,6 +2765,151 @@
     }
   }
 
+
+  /* ---------- Administration : commandes et fichier du logiciel ---------- */
+  var admSuivi = null, admCmds = [], admFiltre = "en_attente";
+  function admActif(){ return !!(fdb() && authReady && firebase.auth().currentUser); }
+  function demarrerAdminVente(){
+    var d = fdb();
+    if(!admActif()){
+      document.getElementById("cmdList").innerHTML = '<div class="empty-state">Les commandes s\'affichent quand vous êtes connecté en ligne avec votre code administrateur.</div>';
+      document.getElementById("fichierInfo").textContent = "Connexion en ligne nécessaire pour gérer le fichier du logiciel.";
+      return;
+    }
+    if(!admSuivi){
+      admSuivi = d.collection("commandes").orderBy("creeLe", "desc").limit(200).onSnapshot(function(q){
+        admCmds = q.docs.map(function(x){ var c = x.data(); c.id = x.id; return c; });
+        afficherCommandes();
+      }, function(e){ document.getElementById("cmdList").innerHTML = '<div class="empty-state">' + esc(erreurFr(e)) + '</div>'; });
+    }
+    infoFichier();
+  }
+  function arreterAdminVente(){ if(admSuivi){ admSuivi(); admSuivi = null; } }
+  function afficherCommandes(){
+    var n = admCmds.filter(function(c){ return c.statut === "en_attente"; }).length, cnt = document.getElementById("cmdCount");
+    cnt.hidden = !n; cnt.textContent = n;
+    var list = document.getElementById("cmdList"), l = admCmds.filter(function(c){ return admFiltre === "tout" || c.statut === admFiltre || (admFiltre === "validee" && c.statut === "revoquee"); });
+    list.innerHTML = "";
+    if(!l.length){ list.appendChild(el("div", "empty-state", admFiltre === "en_attente" ? "Aucune commande en attente." : "Aucune commande.")); return; }
+    l.forEach(function(c){
+      var st = {en_attente:"En attente", validee:"Validée", refusee:"Refusée", revoquee:"Accès révoqué"}[c.statut] || c.statut;
+      var box = el("div", "cmd-item");
+      box.innerHTML =
+        '<div class="cmd-top"><b>N° ' + numCmd(c.id) + ' · ' + esc(c.nom) + '</b><em class="st st-' + c.statut + '">' + st + '</em></div>'+
+        '<div class="cmd-grid">'+
+          '<span>Montant<b>' + fcfa(c.prix) + '</b></span>'+
+          '<span>Référence OM<b class="mono">' + esc(c.reference) + '</b></span>'+
+          '<span>Payé par<b>' + esc(c.payeur) + '</b></span>'+
+          '<span>WhatsApp<b><a target="_blank" rel="noopener" href="https://wa.me/' + telWa(c.telephone) + '">' + esc(c.telephone) + '</a></b></span>'+
+          (c.email ? '<span>E-mail<b>' + esc(c.email) + '</b></span>' : '')+
+          '<span>Date<b>' + quand(c.creeLe) + '</b></span>'+
+          (c.code ? '<span>Code<b class="mono">' + esc(c.code) + '</b></span>' : '')+
+          (c.motif ? '<span>Motif<b>' + esc(c.motif) + '</b></span>' : '')+
+        '</div><div class="cmd-actions"></div><p class="dl-msg" hidden></p>';
+      var act = box.querySelector(".cmd-actions"), msg = box.querySelector(".dl-msg");
+      function bouton(txt, cls, fn){ var b = el("button", "btn btn-sm " + cls, txt); b.type = "button"; b.addEventListener("click", function(){ fn(b, msg); }); act.appendChild(b); }
+      if(c.statut === "en_attente"){
+        bouton("Valider le paiement", "btn-primary", function(b, m){ validerCommande(c, b, m); });
+        bouton("Refuser", "btn-outline", function(b, m){
+          var motif = prompt("Motif du refus (visible par le client) :", "Paiement introuvable — vérifiez la référence Orange Money.");
+          if(motif === null) return;
+          fdb().collection("commandes").doc(c.id).update({statut: "refusee", motif: motif.slice(0, 200)}).catch(function(e){ m.hidden = false; m.className = "dl-msg err"; m.textContent = erreurFr(e); });
+        });
+      }
+      if(c.statut === "validee" && c.code){
+        var wa = el("a", "btn btn-sm btn-whatsapp", "Envoyer le code sur WhatsApp");
+        wa.target = "_blank"; wa.rel = "noopener";
+        wa.href = "https://wa.me/" + telWa(c.telephone) + "?text=" + encodeURIComponent("Bonjour " + c.nom + ", votre paiement pour le " + VENTE.nom + " est validé. Merci !\n\nVotre code de téléchargement : " + c.code + "\n\nTéléchargez le logiciel ici : " + lienClient(c.code) + "\n\nABA-GROUP — 69 17 93 70");
+        act.appendChild(wa);
+        bouton("Révoquer l'accès", "btn-outline", function(b, m){ if(confirm("Désactiver le code " + c.code + " ? Le client ne pourra plus télécharger le logiciel.")) revoquer(c, b, m); });
+      }
+      if(c.statut === "refusee") bouton("Remettre en attente", "btn-outline", function(b, m){ fdb().collection("commandes").doc(c.id).update({statut: "en_attente"}).catch(function(e){ m.hidden = false; m.className = "dl-msg err"; m.textContent = erreurFr(e); }); });
+      list.appendChild(box);
+    });
+  }
+  document.getElementById("cmdFiltres").addEventListener("click", function(e){
+    var b = e.target.closest(".chip"); if(!b) return;
+    admFiltre = b.getAttribute("data-f");
+    this.querySelectorAll(".chip").forEach(function(x){ x.classList.toggle("on", x === b); });
+    afficherCommandes();
+  });
+  /* Copie les morceaux d'un document vers un autre (fichier d'origine -> copie client) */
+  function lireMorceaux(ref, n){
+    var l = []; for(var i = 0; i < n; i++) l.push(ref.collection("parts").doc(String(i)).get());
+    return Promise.all(l).then(function(ps){ return ps.map(function(p){ return p.data().d; }); });
+  }
+  function ecrireMorceaux(ref, morceaux, progres){
+    var i = 0;
+    function suivant(){
+      if(i >= morceaux.length) return Promise.resolve();
+      return ref.collection("parts").doc(String(i)).set({d: morceaux[i]}).then(function(){ i++; if(progres) progres(i, morceaux.length); return suivant(); });
+    }
+    return suivant();
+  }
+  function validerCommande(c, b, m){
+    if(!confirm("Confirmez-vous avoir reçu " + fcfa(c.prix) + " par Orange Money (payé par " + c.payeur + ", référence " + c.reference + ") ?")) return;
+    var d = fdb(), src = d.collection("fichiers").doc(VENTE.id), code = genCode(), dst = d.collection("telechargements").doc(code);
+    var dire = function(t, cls){ m.hidden = false; m.className = "dl-msg " + (cls || ""); m.textContent = t; };
+    b.disabled = true; dire("Préparation du téléchargement du client…");
+    src.get().then(function(sn){
+      if(!sn.exists){ var e = new Error("fichier"); e.code = "pas-de-fichier"; throw e; }
+      var meta = sn.data();
+      return lireMorceaux(src, meta.parts).then(function(mx){
+        return ecrireMorceaux(dst, mx, function(k, n){ dire("Copie du logiciel pour le client : " + k + "/" + n + "…"); });
+      }).then(function(){
+        return dst.set({nom: meta.nom, type: meta.type, taille: meta.taille, parts: meta.parts, version: meta.version || null, commande: c.id, creeLe: firebase.firestore.FieldValue.serverTimestamp()});
+      });
+    }).then(function(){
+      return d.collection("commandes").doc(c.id).update({statut: "validee", code: code, valideeLe: firebase.firestore.FieldValue.serverTimestamp()});
+    }).then(function(){
+      dire("Validée. Le client voit son code ; envoyez-le-lui aussi sur WhatsApp.", "ok");
+    }).catch(function(e){
+      b.disabled = false;
+      dire(e && e.code === "pas-de-fichier" ? "Aucun fichier du logiciel n'est en ligne. Déposez-le d'abord dans l'onglet « Fichier du logiciel »." : erreurFr(e), "err");
+    });
+  }
+  function revoquer(c, b, m){
+    var d = fdb(), ref = d.collection("telechargements").doc(c.code);
+    b.disabled = true;
+    ref.get().then(function(sn){
+      var n = sn.exists ? sn.data().parts : 0, l = [];
+      for(var i = 0; i < n; i++) l.push(ref.collection("parts").doc(String(i)).delete());
+      return Promise.all(l).then(function(){ return ref.delete(); });
+    }).then(function(){
+      return d.collection("commandes").doc(c.id).update({statut: "revoquee"});
+    }).catch(function(e){ b.disabled = false; m.hidden = false; m.className = "dl-msg err"; m.textContent = erreurFr(e); });
+  }
+  function infoFichier(){
+    var z = document.getElementById("fichierInfo");
+    fdb().collection("fichiers").doc(VENTE.id).get().then(function(sn){
+      if(!sn.exists){ z.innerHTML = "<b>Aucun fichier en ligne.</b> Déposez le logiciel ci-dessous avant de valider la première commande."; return; }
+      var f = sn.data();
+      z.innerHTML = "Fichier actuel : <b>" + esc(f.nom) + "</b> (" + Math.round(f.taille / 1024) + " Ko), mis en ligne le " + quand(f.majLe) + ".";
+    }).catch(function(e){ z.textContent = erreurFr(e); });
+  }
+  document.getElementById("fichierEnvoyer").addEventListener("click", function(){
+    var inp = document.getElementById("fichierInput"), f = inp.files && inp.files[0], m = document.getElementById("fichierMsg"), b = this;
+    var dire = function(t, cls){ m.hidden = false; m.className = "dl-msg " + (cls || ""); m.textContent = t; };
+    if(!f){ dire("Choisissez d'abord le fichier du logiciel.", "err"); return; }
+    if(!admActif()){ dire("Connexion en ligne nécessaire (reconnectez-vous avec votre code administrateur).", "err"); return; }
+    if(f.size > 25 * 1024 * 1024){ dire("Fichier trop gros (plus de 25 Mo). Compressez-le en .zip.", "err"); return; }
+    var rd = new FileReader();
+    rd.onload = function(){
+      var b64 = String(rd.result).split(",")[1] || "", mx = [];
+      for(var i = 0; i < b64.length; i += MORCEAU) mx.push(b64.slice(i, i + MORCEAU));
+      var ref = fdb().collection("fichiers").doc(VENTE.id), ancien = 0;
+      b.disabled = true; dire("Envoi…");
+      ref.get().then(function(sn){ ancien = sn.exists ? sn.data().parts : 0; })
+      .then(function(){ return ecrireMorceaux(ref, mx, function(k, n){ dire("Envoi du fichier : " + k + "/" + n + "…"); }); })
+      .then(function(){ var l = []; for(var i = mx.length; i < ancien; i++) l.push(ref.collection("parts").doc(String(i)).delete()); return Promise.all(l); })
+      .then(function(){ return ref.set({nom: f.name, type: f.type || "application/octet-stream", taille: f.size, parts: mx.length, version: Date.now(), majLe: firebase.firestore.FieldValue.serverTimestamp()}); })
+      .then(function(){ dire("Fichier mis en ligne. Les prochaines validations recevront cette version.", "ok"); inp.value = ""; infoFichier(); })
+      .catch(function(e){ dire(erreurFr(e), "err"); })
+      .then(function(){ b.disabled = false; });
+    };
+    rd.readAsDataURL(f);
+  });
+
   /* =========================================================
      INIT
   ========================================================= */
@@ -2443,11 +2943,12 @@
     logiciels: "Logiciels de gestion RH, paie et stock — ABA-GROUP Mali",
     services:  "Services informatiques — ABA-GROUP Mali",
     apropos:   "À propos — ABA-GROUP Mali",
-    contact:   "Contact — ABA-GROUP Mali"
+    contact:   "Contact — ABA-GROUP Mali",
+    telechargement: "Mon téléchargement — ABA-GROUP Mali"
   };
   var pages = document.querySelectorAll("main > .page");
   function afficher(){
-    var id = (location.hash || "").replace("#", "");
+    var id = (location.hash || "").replace("#", "").split("?")[0];
     if(!TITRES[id]) id = "accueil";
     pages.forEach(function(pg){ pg.classList.toggle("active", pg.getAttribute("data-page") === id); });
     document.querySelectorAll("[data-page-link]").forEach(function(a){
