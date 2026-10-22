@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#081527">
+<meta name="theme-color" content="#1440B8">
 <title>ABA-GROUP Mali — PC et logiciels de gestion à Bamako</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -21,19 +21,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F5F8FC;
+    --bg:#FFFFFF;
     --surface:#FFFFFF;
-    --surface-2:#EEF2F9;
-    --border:#DFE6F1;
-    --text:#0E1726;
-    --text-2:#4C596D;
-    --text-3:#7C8AA0;
-    --navy-900:#081527;
-    --navy-800:#0D2140;
-    --navy-700:#123163;
-    --blue-600:#2456C8;
-    --blue-500:#3568E0;
-    --blue-100:#E6EDFC;
+    --surface-2:#F3F7FF;
+    --border:#E2E8F3;
+    --text:#0F172A;
+    --text-2:#475569;
+    --text-3:#64748B;
+    --navy-900:#0B1F4D;
+    --navy-800:#1440B8;
+    --navy-700:#2563EB;
+    --blue-600:#2563EB;
+    --blue-500:#3B82F6;
+    --blue-100:#E8F0FF;
+    --orange-600:#F97316;
+    --orange-ink:#C2410C;
+    --orange-100:#FFF1E6;
+    --green-600:#059669;
+    --green-100:#E3F8EF;
+    --violet-600:#7C3AED;
+    --violet-100:#F1EAFF;
     --grey-500:#5C6B84;
     --whatsapp:#25D366;
     --whatsapp-dark:#1BA851;
@@ -52,19 +59,26 @@
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#0A1220;
-      --surface:#111B2E;
-      --surface-2:#0E1930;
-      --border:#233047;
-      --text:#E8EDF7;
-      --text-2:#B3BDD1;
-      --text-3:#8792A8;
-      --navy-900:#050B16;
-      --navy-800:#0A1830;
-      --navy-700:#0E2348;
-      --blue-600:#5B8DEF;
-      --blue-500:#7BA3F5;
-      --blue-100:#152037;
+      --bg:#0B1222;
+      --surface:#121C31;
+      --surface-2:#0F1A30;
+      --border:#24324D;
+      --text:#EEF2FA;
+      --text-2:#B8C3D9;
+      --text-3:#94A3BD;
+      --navy-900:#060D1F;
+      --navy-800:#0E2C7A;
+      --navy-700:#1D4ED8;
+      --blue-600:#6EA0FF;
+      --blue-500:#93B8FF;
+      --blue-100:#17264A;
+      --orange-600:#FB923C;
+      --orange-ink:#FDBA74;
+      --orange-100:#3A2414;
+      --green-600:#34D399;
+      --green-100:#10302A;
+      --violet-600:#B794FF;
+      --violet-100:#251C45;
       --grey-500:#94A0B8;
       --shadow-sm: 0 1px 2px rgba(0,0,0,.5);
       --shadow-md: 0 10px 28px rgba(0,0,0,.45);
@@ -73,19 +87,26 @@
     }
   }
   :root[data-theme="dark"]{
-    --bg:#0A1220;
-    --surface:#111B2E;
-    --surface-2:#0E1930;
-    --border:#233047;
-    --text:#E8EDF7;
-    --text-2:#B3BDD1;
-    --text-3:#8792A8;
-    --navy-900:#050B16;
-    --navy-800:#0A1830;
-    --navy-700:#0E2348;
-    --blue-600:#5B8DEF;
-    --blue-500:#7BA3F5;
-    --blue-100:#152037;
+    --bg:#0B1222;
+    --surface:#121C31;
+    --surface-2:#0F1A30;
+    --border:#24324D;
+    --text:#EEF2FA;
+    --text-2:#B8C3D9;
+    --text-3:#94A3BD;
+    --navy-900:#060D1F;
+    --navy-800:#0E2C7A;
+    --navy-700:#1D4ED8;
+    --blue-600:#6EA0FF;
+    --blue-500:#93B8FF;
+    --blue-100:#17264A;
+    --orange-600:#FB923C;
+    --orange-ink:#FDBA74;
+    --orange-100:#3A2414;
+    --green-600:#34D399;
+    --green-100:#10302A;
+    --violet-600:#B794FF;
+    --violet-100:#251C45;
     --grey-500:#94A0B8;
     --shadow-sm: 0 1px 2px rgba(0,0,0,.5);
     --shadow-md: 0 10px 28px rgba(0,0,0,.45);
@@ -740,6 +761,59 @@
     .video-foot-actions{width:100%;} .video-foot-actions .btn{flex:1;}
     .cmd-row{flex-wrap:wrap;} .cmd-row .btn{width:100%;}
   }
+
+  /* ---------- Couleurs vives et modernes ---------- */
+  .eyebrow,.section-head p.eyebrow,.about-text p.eyebrow{color:var(--orange-ink); font-size:12.5px; margin-top:0;}
+  .btn-primary{background:var(--blue-600);}
+  .btn-primary:hover{background:#1D4ED8;}
+  .hero{background:
+      radial-gradient(700px 420px at 88% 12%, rgba(249,115,22,.28), transparent 60%),
+      radial-gradient(800px 520px at 5% 95%, rgba(96,165,250,.45), transparent 60%),
+      linear-gradient(150deg, #0B1F4D 0%, #1440B8 48%, #2563EB 100%);}
+  .hero-sub{color:#E3ECFF;}
+  .hero-stats div span{color:#C9DAFF;}
+  .hero-eyebrow{background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.28); color:#fff;}
+  .hero-eyebrow .dot{background:#FDBA74; box-shadow:0 0 0 3px rgba(249,115,22,.35);}
+  .hero .btn-primary{background:#F97316; box-shadow:0 8px 22px rgba(249,115,22,.35);}
+  .hero .btn-primary:hover{background:#EA580C;}
+  .section-alt{background:var(--surface-2);}
+  /* Cartes de l'accueil : une couleur chacune */
+  .features .feature-card{border-top:4px solid var(--blue-600);}
+  .features .feature-card:nth-child(2){border-top-color:var(--orange-600);}
+  .features .feature-card:nth-child(3){border-top-color:var(--green-600);}
+  .features .feature-card:nth-child(2) .feature-ico{background:var(--orange-100);}
+  .features .feature-card:nth-child(2) .feature-ico svg,.features .feature-card:nth-child(2) .feature-more{color:var(--orange-ink);}
+  .features .feature-card:nth-child(3) .feature-ico{background:var(--green-100);}
+  .features .feature-card:nth-child(3) .feature-ico svg,.features .feature-card:nth-child(3) .feature-more{color:var(--green-600);}
+  /* Services : icônes de couleurs variées */
+  .service-card{border-top:3px solid transparent; transition:transform .18s ease, border-color .18s ease;}
+  .service-card:nth-child(4n+1){border-top-color:var(--blue-600);}
+  .service-card:nth-child(4n+2){border-top-color:var(--orange-600);}
+  .service-card:nth-child(4n+2) .service-ico{background:var(--orange-100);} .service-card:nth-child(4n+2) .service-ico svg{color:var(--orange-ink);}
+  .service-card:nth-child(4n+3){border-top-color:var(--green-600);}
+  .service-card:nth-child(4n+3) .service-ico{background:var(--green-100);} .service-card:nth-child(4n+3) .service-ico svg{color:var(--green-600);}
+  .service-card:nth-child(4n){border-top-color:var(--violet-600);}
+  .service-card:nth-child(4n) .service-ico{background:var(--violet-100);} .service-card:nth-child(4n) .service-ico svg{color:var(--violet-600);}
+  /* Logiciels */
+  .software-card{border-top:4px solid var(--blue-600);}
+  .software-card + .software-card{border-top-color:var(--green-600);}
+  .software-ico{background:linear-gradient(135deg,#2563EB,#1440B8);}
+  .software-card + .software-card .software-ico{background:linear-gradient(135deg,#10B981,#047857);}
+  .software-list svg{color:var(--blue-600);}
+  .software-card + .software-card .software-list svg{color:var(--green-600);}
+  /* À propos, CTA, pied de page */
+  .value-row .tick{background:var(--orange-100);} .value-row .tick svg{color:var(--orange-ink);}
+  .cta-card{background:
+      radial-gradient(500px 280px at 92% 0%, rgba(249,115,22,.35), transparent 60%),
+      linear-gradient(140deg, #1440B8, #2563EB);}
+  .cta-card p{color:#E3ECFF;} .cta-card .cta-pay{color:#C9DAFF;}
+  .footer{background:#0B1F4D;}
+  .nav-links a.active,.tabbar a.active{color:var(--blue-600); background:var(--blue-100);}
+  .product-card:hover,.feature-card:hover{box-shadow:0 14px 32px rgba(37,99,235,.14);}
+  .chip.on,.chap.on{background:var(--blue-600); border-color:var(--blue-600);}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .hero .btn-primary{color:#fff;}
+  }
 </style>
 
 </head>
@@ -792,9 +866,9 @@
 <header class="hero">
   <div class="container">
     <div class="hero-copy">
-      <div class="hero-eyebrow"><span class="dot"></span>Vente de PC &amp; solutions informatiques à Bamako, Mali</div>
-      <h1>Des solutions informatiques adaptées à vos besoins</h1>
-      <p class="hero-sub">PC performants, logiciels de gestion RH, paie, stock et solutions informatiques pour accompagner efficacement votre activité.</p>
+      <div class="hero-eyebrow"><span class="dot"></span>Bamako · PC, logiciels et assistance</div>
+      <h1>Des ordinateurs fiables et des logiciels qui simplifient votre gestion</h1>
+      <p class="hero-sub">Nous vendons des PC portables en stock à Bamako et des logiciels de paie et de stock pensés pour les entreprises maliennes. On installe, on vous forme, et on reste joignables après.</p>
       <div class="hero-actions">
         <a href="#catalogue" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -806,9 +880,9 @@
         </a>
       </div>
       <div class="hero-stats">
-        <div><b id="statPcStock">—</b><span>PC disponibles en stock</span></div>
-        <div><b id="statSoftwareCount">—</b><span>Logiciels de gestion sur-mesure</span></div>
-        <div><b>100%</b><span>Support &amp; maintenance locale</span></div>
+        <div><b id="statPcStock">—</b><span>PC prêts à livrer</span></div>
+        <div><b id="statSoftwareCount">—</b><span>Logiciels de gestion maison</span></div>
+        <div><b>Sur place</b><span>Installation et dépannage à Bamako</span></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -829,19 +903,19 @@
     <a class="feature-card" href="#catalogue">
       <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
       <h3>Vente de PC</h3>
-      <p>Ordinateurs portables et PC adaptés aux besoins professionnels, bureautiques et personnels.</p>
+      <p>Des portables solides pour le bureau, les études ou la maison. Vous voyez le stock et les caractéristiques avant de commander.</p>
       <span class="feature-more">Voir les ordinateurs →</span>
     </a>
     <a class="feature-card" href="#logiciels">
       <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3.3"/><path d="M2.5 20c0-3.3 2.7-5.8 6-5.8s6 2.5 6 5.8"/><circle cx="17" cy="8.5" r="2.5"/><path d="M15.8 14.3c2.6.3 4.7 2.5 4.7 5.4"/></svg></div>
       <h3>Gestion RH &amp; Paie</h3>
-      <p>Des solutions permettant de gérer efficacement les salariés, les contrats, les congés, les absences et la paie.</p>
+      <p>Fiches du personnel, contrats, congés, heures sup et bulletins de paie : tout est calculé pour vous, dans un classeur Excel facile à prendre en main.</p>
       <span class="feature-more" data-demo="rh">▶ Voir la démo vidéo</span>
     </a>
     <a class="feature-card" href="#logiciels">
       <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div>
       <h3>Gestion de Stock</h3>
-      <p>Des solutions de gestion des produits, stocks, entrées, sorties, ventes et inventaires.</p>
+      <p>Suivez vos produits, vos entrées et sorties et vos ventes, et faites vos inventaires sans y passer des journées.</p>
       <span class="feature-more">Découvrir le logiciel →</span>
     </a>
   </div>
@@ -852,8 +926,8 @@
   <div class="container">
     <div class="section-head row-head">
       <div>
-        <p class="eyebrow">En stock à Bamako</p>
-        <h2>Nos ordinateurs du moment</h2>
+        <p class="eyebrow">Disponibles maintenant</p>
+        <h2>Les PC en stock</h2>
       </div>
       <a class="btn btn-outline" href="#catalogue">Tout le catalogue →</a>
     </div>
@@ -866,9 +940,9 @@
   <div class="container">
     <div class="cta-card">
       <div>
-        <h2>Besoin d'un conseil ou d'un devis ?</h2>
-        <p>Dites-nous ce que vous cherchez : PC, logiciel de paie ou de stock, installation. Réponse rapide sur WhatsApp.</p>
-        <p class="cta-pay">Paiement en espèces à la livraison / en magasin, ou par <b>Orange Money</b>.</p>
+        <h2>Vous hésitez entre deux modèles ? Parlons-en.</h2>
+        <p>Dites-nous ce que vous comptez en faire et votre budget, on vous conseille honnêtement. Sur WhatsApp, on répond vite.</p>
+        <p class="cta-pay">Vous payez en espèces à la livraison ou en magasin, ou par <b>Orange Money</b>.</p>
       </div>
       <div class="cta-actions">
         <a class="btn btn-whatsapp" id="waCta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3C7 7.2 6.4 7.8 6.4 9c0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/></svg> Écrire sur WhatsApp</a>
@@ -884,14 +958,14 @@
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">Catalogue</p>
-      <h2>Ordinateurs portables disponibles à Bamako</h2>
-      <p>Découvrez nos PC en stock au Mali — caractéristiques complètes, prix et disponibilité en temps réel. Chaque commande se finalise directement sur WhatsApp.</p>
+      <h2>Nos ordinateurs portables</h2>
+      <p>Tout ce qui est affiché est en stock à Bamako. Ouvrez une fiche pour voir les photos et les caractéristiques, puis commandez sur WhatsApp ou ajoutez au panier.</p>
     </div>
 
     <div class="toolbar">
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" id="searchInput" placeholder="Rechercher par marque ou modèle (ex. HP ProBook)">
+        <input type="text" id="searchInput" placeholder="Chercher un modèle (ex. HP ProBook)">
       </div>
       <div class="filters">
         <select id="filterBrand"><option value="">Marque</option></select>
@@ -919,8 +993,8 @@
   <div class="container">
       <div class="section-head">
         <p class="eyebrow">Logiciels de gestion</p>
-        <h2>Nos solutions logicielles pour entreprises au Mali</h2>
-        <p>Deux logiciels de gestion pensés pour les réalités des entreprises et organisations maliennes : ressources humaines &amp; paie, et gestion de stock.</p>
+        <h2>Deux logiciels pour gagner du temps chaque mois</h2>
+        <p>Conçus à Bamako, selon les règles et les habitudes des entreprises maliennes. Ils fonctionnent sous Excel : pas d'abonnement, pas besoin d'internet pour travailler.</p>
       </div>
       <div class="software-grid" id="softwareGrid"></div>
   </div>
@@ -931,8 +1005,8 @@
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">Services</p>
-      <h2>Un accompagnement complet, du matériel au support</h2>
-      <p>Au-delà de la vente de PC, ABA-GROUP accompagne les entreprises maliennes dans le déploiement et le suivi de leurs outils informatiques.</p>
+      <h2>On ne vous laisse pas seul après l'achat</h2>
+      <p>Installation, formation de vos équipes, dépannage : nous suivons votre matériel et vos logiciels dans la durée.</p>
     </div>
     <div class="services-grid" id="servicesGrid"></div>
   </div>
@@ -947,20 +1021,20 @@
       </div>
       <div class="about-text">
         <p class="eyebrow">À propos d'ABA-GROUP</p>
-        <h2 style="margin-bottom:16px;">Une solution informatique de confiance au Mali</h2>
-        <p>Nous proposons des solutions informatiques pratiques et adaptées aux besoins des particuliers, entreprises et organisations. Notre objectif est de faciliter l'accès à du matériel informatique performant et à des logiciels de gestion permettant d'améliorer l'organisation, la productivité et le suivi des activités.</p>
+        <h2 style="margin-bottom:16px;">Une équipe de Bamako, joignable quand vous en avez besoin</h2>
+        <p>ABA-GROUP équipe les particuliers, les entreprises et les organisations en ordinateurs et en logiciels de gestion. Notre idée est simple : du matériel qui tient dans le temps, des outils que vos équipes utilisent vraiment, et quelqu'un à appeler quand quelque chose coince.</p>
         <div class="values">
           <div class="value-row">
             <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-            <div><b>Qualité et fiabilité</b></div>
+            <div><b>Du matériel vérifié avant de vous être remis</b></div>
           </div>
           <div class="value-row">
             <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-            <div><b>Accompagnement personnalisé</b></div>
+            <div><b>Une installation et une formation faites avec vous</b></div>
           </div>
           <div class="value-row">
             <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-            <div><b>Solutions adaptées aux besoins</b></div>
+            <div><b>Des conseils honnêtes, selon votre usage et votre budget</b></div>
           </div>
         </div>
       </div>
@@ -973,8 +1047,8 @@
   <div class="container">
     <div class="section-head">
       <p class="eyebrow">Contact</p>
-      <h2>Discutons de votre projet informatique</h2>
-      <p>Notre équipe à Bamako répond rapidement sur WhatsApp — c'est le moyen le plus rapide de connaître un prix ou une disponibilité.</p>
+      <h2>Écrivez-nous, on vous répond</h2>
+      <p>Pour un prix, une disponibilité ou une démonstration, le plus rapide reste WhatsApp. Vous pouvez aussi nous appeler ou laisser un message ci-dessous.</p>
     </div>
     <div class="contact-grid">
       <div>
@@ -998,7 +1072,7 @@
           <a class="btn btn-outline" href="mailto:abagroupmali@gmail.com">Envoyer un email</a>
           <a class="btn btn-outline" href="https://www.facebook.com/share/1C658X9DdM/" target="_blank" rel="noopener">Facebook</a>
         </div>
-        <p class="form-note" style="margin-top:16px;">Moyens de paiement acceptés : espèces à la livraison / en magasin et <b>Orange Money</b>.</p>
+        <p class="form-note" style="margin-top:16px;">Paiement en espèces à la livraison ou en magasin, ou par <b>Orange Money</b>.</p>
       </div>
       <div class="form-card">
         <form id="contactForm">
@@ -1006,13 +1080,13 @@
             <div class="field"><label for="cfName">Nom</label><input id="cfName" name="name" type="text" required placeholder="Votre nom"></div>
             <div class="field"><label for="cfPhone">Téléphone</label><input id="cfPhone" name="phone" type="tel" required placeholder="69 17 93 70"></div>
             <div class="field full"><label for="cfEmail">Email</label><input id="cfEmail" name="email" type="email" placeholder="vous@exemple.com"></div>
-            <div class="field full"><label for="cfMessage">Message</label><textarea id="cfMessage" name="message" rows="4" required placeholder="Décrivez votre besoin (PC, logiciel RH, gestion de stock...)"></textarea></div>
+            <div class="field full"><label for="cfMessage">Message</label><textarea id="cfMessage" name="message" rows="4" required placeholder="Dites-nous ce que vous cherchez : un PC, le logiciel de paie, une installation…"></textarea></div>
           </div>
           <button type="submit" class="btn btn-whatsapp btn-block">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3C7 7.2 6.4 7.8 6.4 9c0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/></svg>
             Envoyer le message
           </button>
-          <p class="form-note">En cliquant sur « Envoyer », votre message s'ouvre dans WhatsApp, prêt à être transmis à ABA-GROUP.</p>
+          <p class="form-note">Votre message s'ouvre dans WhatsApp, déjà rédigé : il ne reste qu'à appuyer sur Envoyer.</p>
         </form>
       </div>
     </div>
@@ -1025,7 +1099,7 @@
     <div class="section-head">
       <p class="eyebrow">Espace client</p>
       <h2>Mon téléchargement</h2>
-      <p>Après validation de votre paiement Orange Money, saisissez ici votre code pour télécharger le logiciel. Le code vous est aussi envoyé sur WhatsApp.</p>
+      <p>Une fois votre paiement vérifié, vous recevez un code sur WhatsApp. Saisissez-le ici pour télécharger le logiciel, autant de fois que nécessaire.</p>
     </div>
     <div class="dl-card">
       <form id="dlForm" class="dl-form">
@@ -1041,7 +1115,7 @@
     </div>
     <div class="dl-help">
       <b>Pas encore de code ?</b>
-      <span>Achetez le logiciel depuis la page Logiciels, ou écrivez-nous sur WhatsApp au 69 17 93 70.</span>
+      <span>Achetez le logiciel en ligne, ou écrivez-nous sur WhatsApp au 69 17 93 70 si vous avez une question avant.</span>
       <div class="dl-help-actions">
         <button type="button" class="btn btn-om" data-acheter>Acheter le logiciel RH</button>
         <a class="btn btn-outline" href="#logiciels">Voir les logiciels</a>
@@ -1060,7 +1134,7 @@
           <div class="footer-logo-badge"><img loading="lazy" src="img/logo.png" alt="Logo ABA-GROUP"></div>
           <b>ABA-GROUP</b>
         </div>
-        <p>Solutions informatiques, PC et logiciels de gestion pour les entreprises et particuliers au Mali.</p>
+        <p>Ordinateurs, logiciels de paie et de stock, installation et dépannage. À Bamako, pour les entreprises comme pour les particuliers.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/share/1C658X9DdM/" target="_blank" rel="noopener" aria-label="Facebook ABA-GROUP">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.4c0-.9.2-1.5 1.5-1.5h1.6V4.3C16.3 4.2 15.3 4 14.2 4c-2.3 0-3.9 1.4-3.9 4v2.5H7.8v3h2.5V21h3.2z"/></svg>
@@ -1119,14 +1193,14 @@
   </div>
   <div class="cart-items" id="cartItems"></div>
   <div class="cart-foot">
-    <p class="cart-note" id="cartNote" hidden>Certains articles sont au prix « à définir » — le montant exact sera confirmé sur WhatsApp.</p>
+    <p class="cart-note" id="cartNote" hidden>Certains prix restent à confirmer : nous vous donnons le montant exact sur WhatsApp.</p>
     <div class="cart-total-row"><span>Total estimé</span><span id="cartTotal">0 FCFA</span></div>
     <div class="cart-payment">
       <label><input type="radio" name="cartPayment" value="livraison" checked> Paiement à la livraison / en magasin (espèces)</label>
       <label><input type="radio" name="cartPayment" value="orange-money"> Orange Money (paiement mobile)</label>
     </div>
     <div class="cart-om-box" id="cartOmBox">
-      Envoyez le montant total via Orange Money au numéro <b>72 21 02 16</b>, puis cliquez sur « Commander sur WhatsApp » et joignez la capture d'écran du paiement pour valider votre commande.
+      Envoyez le montant au <b>72 21 02 16</b> par Orange Money, puis cliquez sur « Commander sur WhatsApp » et joignez la capture du paiement. On confirme dès réception.
     </div>
     <button class="btn btn-whatsapp btn-block" id="cartCheckoutBtn" style="margin-top:14px;">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.1 7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3C7 7.2 6.4 7.8 6.4 9c0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/></svg>
@@ -1200,7 +1274,7 @@
     <div class="video-head">
       <p class="eyebrow" style="margin-bottom:6px;">Démonstration · 6 min 30</p>
       <h3 id="videoTitle">Logiciel de gestion RH &amp; Paie</h3>
-      <p>Saisie du personnel, paie, net négocié, heures sup, départs, bulletins, documents et tableau de bord.</p>
+      <p>Six minutes pour voir le logiciel à l'œuvre : de l'embauche d'un salarié jusqu'au bulletin de paie.</p>
     </div>
     <video id="demoVideo" controls playsinline preload="none" poster="video/demo-logiciel-rh.jpg"></video>
     <div class="chap-wrap">
@@ -1208,7 +1282,7 @@
       <div class="chap-list" id="chapList"></div>
     </div>
     <div class="video-foot">
-      <span>Convaincu ? Achetez-le en ligne et téléchargez-le dès la validation du paiement.</span>
+      <span>Il vous plaît ? Achetez-le en ligne, vous le téléchargez dès que le paiement est vérifié.</span>
       <div class="video-foot-actions">
         <a class="btn btn-outline" id="videoWa" target="_blank" rel="noopener">Une question ?</a>
         <button type="button" class="btn btn-om" data-acheter>Acheter — 150 000 FCFA</button>
@@ -1420,25 +1494,25 @@
     {
       id: "rh-paie",
       name: "Logiciel de gestion RH & Paie",
-      features: ["Gestion des employés","Gestion des contrats","Gestion des dossiers du personnel","Gestion des absences","Gestion des congés","Gestion de la paie","États et rapports","Gestion administrative du personnel"],
-      waMessage: "Bonjour ABA-GROUP, je souhaite avoir plus d'informations concernant votre logiciel de gestion RH & Paie et demander une démonstration."
+      features: ["Une fiche par salarié : état civil, contrat, banque, sécurité sociale","Paie calculée automatiquement, bulletins prêts à imprimer","Heures supplémentaires et majorations calculées pour vous","Retrouver le brut à partir d'un net négocié","Congés, absences et départs suivis au même endroit","Attestations et certificats de travail générés en un clic","Tableau de bord : effectifs, masse salariale, ancienneté"],
+      waMessage: "Bonjour ABA-GROUP, le logiciel RH & Paie m'intéresse. Pouvez-vous me le présenter ?"
     },
     {
       id: "stock",
       name: "Logiciel de gestion de Stock",
-      features: ["Gestion des produits","Entrées de stock","Sorties de stock","Gestion des fournisseurs","Gestion des clients","Gestion des ventes","Inventaire","États et rapports"],
-      waMessage: "Bonjour ABA-GROUP, je souhaite avoir plus d'informations concernant votre logiciel de gestion de Stock et demander une démonstration."
+      features: ["Une fiche par produit, avec son stock à jour","Entrées et sorties enregistrées au fil de l'eau","Fichier clients et fournisseurs","Ventes suivies jour après jour","Inventaires plus rapides","États et rapports prêts à imprimer"],
+      waMessage: "Bonjour ABA-GROUP, le logiciel de gestion de stock m'intéresse. Pouvez-vous me le présenter ?"
     }
   ];
 
   var BASE_SERVICES = [
-    { title:"Vente de PC et accessoires informatiques", desc:"Ordinateurs, périphériques et accessoires sélectionnés pour durer.", icon:"laptop" },
-    { title:"Installation et configuration de logiciels", desc:"Mise en place propre et sécurisée de vos outils métier.", icon:"gear" },
-    { title:"Mise en place de solutions de gestion RH", desc:"Déploiement du logiciel RH & Paie adapté à votre structure.", icon:"users" },
-    { title:"Mise en place de solutions de gestion de stock", desc:"Déploiement du logiciel de gestion de stock et de vente.", icon:"box" },
-    { title:"Formation et accompagnement des utilisateurs", desc:"Prise en main guidée pour vos équipes, à votre rythme.", icon:"cap" },
-    { title:"Maintenance et assistance informatique", desc:"Un support réactif pour garder votre matériel opérationnel.", icon:"wrench" },
-    { title:"Conseil en solutions informatiques", desc:"Des recommandations claires pour équiper votre activité.", icon:"chat" }
+    { title:"PC et accessoires", desc:"Portables, souris, sacoches, disques : du matériel que nous avons choisi pour durer.", icon:"laptop" },
+    { title:"Installation de vos logiciels", desc:"On installe et on règle vos outils, proprement, pour que tout marche dès le premier jour.", icon:"gear" },
+    { title:"Mise en route de la paie", desc:"On paramètre le logiciel RH & Paie avec vos salariés, vos rubriques et vos taux.", icon:"users" },
+    { title:"Mise en route du stock", desc:"On saisit avec vous vos produits et votre stock de départ, puis on vous laisse les clés.", icon:"box" },
+    { title:"Formation de vos équipes", desc:"Des séances pratiques, sur vos propres données, au rythme de chacun.", icon:"cap" },
+    { title:"Dépannage et maintenance", desc:"Un ordinateur lent, un logiciel qui bloque ? Appelez-nous, on s'en occupe.", icon:"wrench" },
+    { title:"Conseil avant achat", desc:"On vous aide à choisir selon votre usage et votre budget, sans vous pousser à la dépense.", icon:"chat" }
   ];
 
   var SERVICE_ICONS = {
@@ -1920,8 +1994,8 @@
         (s.id === "rh-paie" ? '<button type="button" class="btn btn-primary btn-block demo-btn" data-demo="rh"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Voir la vidéo de démonstration <span class="demo-len">6 min</span></button>' : '')+
         (s.id === VENTE.id ? '<div class="soft-buy"><div class="soft-price"><span>Prix</span><b>'+fcfa(VENTE.prix)+'</b><small>Paiement Orange Money · téléchargement immédiat après validation</small></div><button type="button" class="btn btn-om" data-acheter>Acheter et télécharger</button></div>' : '')+
         '<div class="software-actions">'+
-          '<a class="btn btn-outline" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Demander une démonstration</a>'+
-          '<a class="btn btn-whatsapp" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Contacter sur WhatsApp</a>'+
+          '<a class="btn btn-outline" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Demander une présentation</a>'+
+          '<a class="btn btn-whatsapp" href="'+waLink(s.waMessage)+'" target="_blank" rel="noopener">Poser une question</a>'+
         '</div>';
       wrap.appendChild(card);
     });
@@ -2050,7 +2124,7 @@
         dire("Téléchargement lancé : « " + m.nom + " ». Retrouvez-le dans le dossier Téléchargements de votre appareil.", "ok");
       });
     }).catch(function(e){
-      dire(e && e.code === "code-inconnu" ? "Ce code n'existe pas ou a été désactivé. Vérifiez-le, ou contactez-nous sur WhatsApp au 69 17 93 70." : erreurFr(e), "err");
+      dire(e && e.code === "code-inconnu" ? "Ce code ne fonctionne pas. Vérifiez qu'il n'y a pas d'erreur de frappe, sinon écrivez-nous sur WhatsApp au 69 17 93 70 et on regarde ensemble." : erreurFr(e), "err");
     }).then(function(){ if(btn) btn.disabled = false; });
   }
 
@@ -2074,9 +2148,9 @@
       '<ol class="achat-steps">'+
         '<li><b>Envoyez ' + fcfa(VENTE.prix) + ' par Orange Money</b> au numéro'+
           '<div class="om-num"><span>' + VENTE.om + '</span><button type="button" class="btn btn-outline btn-sm" id="omCopy">Copier le numéro</button></div>'+
-          '<small>Bénéficiaire : ABA-GROUP. Faites le transfert depuis votre menu Orange Money.</small></li>'+
-        '<li><b>Gardez le SMS de confirmation</b> d\'Orange Money : il contient la référence de la transaction.</li>'+
-        '<li><b>Remplissez ce formulaire</b>. Dès que nous avons vérifié le paiement, votre code de téléchargement s\'affiche ici et vous est envoyé sur WhatsApp.</li>'+
+          '<small>Le compte est au nom d\'ABA-GROUP. Faites un transfert classique depuis votre menu Orange Money.</small></li>'+
+        '<li><b>Gardez le SMS</b> qu\'Orange Money vous envoie : on a besoin de la référence qu\'il contient.</li>'+
+        '<li><b>Remplissez le formulaire ci-dessous.</b> Dès qu\'on a vérifié le paiement, votre code apparaît ici et on vous l\'envoie aussi sur WhatsApp.</li>'+
       '</ol>'+
       '<form id="achatForm" class="achat-form">'+
         '<div class="field"><label for="acNom">Nom complet ou entreprise</label><input id="acNom" required maxlength="80" autocomplete="name"></div>'+
@@ -2086,7 +2160,7 @@
         '<div class="field full"><label for="acMail">E-mail (facultatif)</label><input id="acMail" type="email" maxlength="80" autocomplete="email"></div>'+
         '<p class="dl-msg err" id="acErr" hidden></p>'+
         '<button type="submit" class="btn btn-om btn-block" id="acGo">J\'ai payé — envoyer ma commande</button>'+
-        '<p class="form-note">Montant : ' + fcfa(VENTE.prix) + '. La vérification est faite par ABA-GROUP, généralement en quelques minutes aux heures de bureau.</p>'+
+        '<p class="form-note">Montant : ' + fcfa(VENTE.prix) + '. C\'est une personne de l\'équipe qui vérifie chaque paiement, en général en quelques minutes pendant les heures de bureau.</p>'+
       '</form>'+
       '<a class="achat-link" href="#telechargement" id="achatDejaCode">J\'ai déjà un code de téléchargement →</a>';
     document.getElementById("omCopy").addEventListener("click", function(){
@@ -2124,12 +2198,12 @@
     function afficher(c){
       var z = document.getElementById("suivi"); if(!z) return;
       if(c.statut === "validee" && c.code){
-        z.innerHTML = '<div class="suivi-etat ok">Paiement validé ✓</div>'+
+        z.innerHTML = '<div class="suivi-etat ok">C\'est bon, paiement reçu ✓</div>'+
           '<p>Commande n° <b>' + numCmd(id) + '</b>. Votre code de téléchargement :</p>'+
           '<div class="code-box">' + esc(c.code) + '</div>'+
           '<button type="button" class="btn btn-primary btn-block" id="suiviDl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Télécharger le logiciel</button>'+
           '<p class="dl-msg" id="suiviMsg" hidden></p>'+
-          '<p class="form-note">Notez ce code : il vous permet de télécharger à nouveau le logiciel depuis « Mon téléchargement ».</p>';
+          '<p class="form-note">Gardez ce code précieusement : il vous permet de retélécharger le logiciel plus tard, depuis « Mon téléchargement ». Merci pour votre confiance !</p>';
         document.getElementById("suiviDl").addEventListener("click", function(){ telecharger(c.code, document.getElementById("suiviMsg"), this); });
       } else if(c.statut === "refusee"){
         z.innerHTML = '<div class="suivi-etat err">Paiement non retrouvé</div>'+
@@ -2139,8 +2213,8 @@
         z.innerHTML = '<div class="suivi-etat err">Accès désactivé</div><p>Le code de cette commande a été désactivé. Contactez ABA-GROUP sur WhatsApp au 69 17 93 70.</p>';
       } else {
         z.innerHTML = '<div class="suivi-etat wait"><span class="spin"></span>Paiement en cours de vérification</div>'+
-          '<p>Commande n° <b>' + numCmd(id) + '</b> enregistrée. Cette fenêtre se mettra à jour toute seule dès la validation.</p>'+
-          '<p>Vous pouvez aussi la fermer : retrouvez votre commande plus tard dans <a href="#telechargement" class="suivi-lien">Mon téléchargement</a>.</p>'+
+          '<p>Votre commande n° <b>' + numCmd(id) + '</b> est bien arrivée. Restez sur cette page : elle se met à jour toute seule dès que le paiement est vérifié.</p>'+
+          '<p>Vous pouvez aussi fermer : votre commande vous attend dans <a href="#telechargement" class="suivi-lien">Mon téléchargement</a>.</p>'+
           '<a class="btn btn-whatsapp btn-block" target="_blank" rel="noopener" href="' + waLink(waMsg) + '">Prévenir ABA-GROUP sur WhatsApp (plus rapide)</a>';
         var l = z.querySelector(".suivi-lien"); if(l) l.addEventListener("click", fermerAchat);
       }
